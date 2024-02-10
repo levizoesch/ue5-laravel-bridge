@@ -1,5 +1,5 @@
 # UE5-Laravel Bridge
-A robust CSRF inspired token designed to secure Laravel against MITM attacks by authenticating HTTP requests from Unreal Engine 5 (UE5) using CSRF-inspired tokens.
+A low level robust CSRF inspired token designed to secure Laravel against MITM attacks by authenticating HTTP requests from Unreal Engine 5 (UE5) using CSRF-inspired tokens.
 
 ## Overview
 
@@ -65,3 +65,6 @@ If you feel you can help improve this repository please feel free to submit PR R
 ## Issues or Bugs
 
 Please submit a [new Issue](https://github.com/levizoesch/ue5-laravel-bridge/issues/new) if you need help, or have bugs.
+
+## Known Security Issues
+XOR Does have some security vulnerabilities. AES Is much better, and I may refactor things around that in the future. Ideally RSA combined with AES would be the best.
