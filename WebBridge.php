@@ -22,7 +22,7 @@ class WebBridge extends Controller
 
         $userAgent = Request()->header('USER_AGENT');
         $timeStamp = Request()->header('X-UE5-Timestamp');
-        $jpbToken = Request()->header('X-UE5-Token');
+        $ue5Token = Request()->header('X-UE5-Token');
 
         if (in_array($userAgent, ['UE5-Client', 'UE5-Server', 'UE5-Editor'])) {
 
@@ -42,7 +42,7 @@ class WebBridge extends Controller
             // Expected encrypted token
             $encrypted = $this->encrypt($backToUETimestamp, $this->ENCRYPTION_KEY);
 
-            if ($jpbToken !== $encrypted) {
+            if ($ue5Token !== $encrypted) {
                 // Hash does not match
                 return false;
             }
