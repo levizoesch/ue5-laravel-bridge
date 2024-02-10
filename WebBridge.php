@@ -12,12 +12,12 @@ class WebBridge extends Controller
 
     public function __construct()
     {
-        $this->ENCRYPTION_KEY = "a25ea98b37d4efb661f2cf679e1a9bfd165060a7"; // random hash encryption key. Change this...
-        $this->ADDITIONAL_TIME = 123456789; // unix timestamp additional time to base time
+        $this->ENCRYPTION_KEY = "a25ea98b37d4efb661f2cf679e1a9bfd165060a7"; // must match EncryptionKeys::MD5_HASH_KEY in UE5Bridge.cpp
+        $this->ADDITIONAL_TIME = 123456789; // unix timestamp adder must match EncryptionKeys::TIMESTAMP_ADDER in UE5Bridge.cpp
         $this->DATETIME_FORMAT = 'Y.m.d-H.i.s'; // unreal engine time format.
     }
 
-    public function Validate(): bool
+    public function VerifyRequest(): bool
     {
 
         $userAgent = Request()->header('USER_AGENT');
