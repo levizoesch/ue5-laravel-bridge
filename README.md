@@ -16,8 +16,8 @@ The `ue5-laravel-bridge` utilizes a token-based authentication mechanism to secu
 
 ### Prerequisites
 
-- An Unreal Engine 5 project.
-- A Laravel-based application.
+- A Unreal Engine 5 project.
+- A Laravel 8, 9, 10 project.
 
 ### Setup Instructions
 
