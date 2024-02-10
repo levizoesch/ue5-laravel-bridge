@@ -4,7 +4,7 @@
 #include "UE5Bridge.generated.h"
 
 UCLASS()
-class MYUE5PROJECT_API UUE5Bridge : public UObject
+class MYUE5PROJECT_API UUE5Bridge : public UObject // NOTE* You will need to update MYUE5PROJECT_API match your projects _API name -- See any UE5 .h to get.
 {
 	GENERATED_BODY()
 public:
